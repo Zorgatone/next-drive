@@ -1,9 +1,13 @@
 package main
 
 import (
+	"context"
 	"embed"
+	"fmt"
 
-	"github.com/wailsapp/wails/v2"
+	_ "github.com/joho/godotenv/autoload"
+	"github.com/wailsapp/wails/v2/pkg/application"
+	"github.com/wailsapp/wails/v2/pkg/logger"
 	"github.com/wailsapp/wails/v2/pkg/options"
 	"github.com/wailsapp/wails/v2/pkg/options/assetserver"
 	"github.com/wailsapp/wails/v2/pkg/options/mac"
@@ -13,11 +17,14 @@ import (
 var assets embed.FS
 
 func main() {
-	// Create an instance of the app structure
-	app := NewApp()
+	appLogger := logger.NewDefaultLogger()
 
-	// Create application with options
-	err := wails.Run(&options.App{
+	// Create an instance of the app structure
+	app := NewApp(appLogger)
+
+	var wailsApp *application.Application = nil
+
+	wailsApp = application.NewWithOptions(&options.App{
 		Title:  "next-drive",
 		Width:  1024,
 		Height: 768,
@@ -30,13 +37,23 @@ func main() {
 			},
 		},
 		BackgroundColour: &options.RGBA{R: 27, G: 38, B: 54, A: 1},
-		OnStartup:        app.startup,
+		OnStartup: func(ctx context.Context) {
+			err := app.startup(ctx)
+
+			if err != nil {
+				appLogger.Error(fmt.Sprintf("startup error: %s", err.Error()))
+				wailsApp.Quit()
+			}
+		},
 		Bind: []interface{}{
 			app,
 		},
 	})
 
+	// Create application with options
+	err := wailsApp.Run()
+
 	if err != nil {
-		println("Error:", err.Error())
+		appLogger.Error(fmt.Sprintf("run error: %s", err.Error()))
 	}
 }

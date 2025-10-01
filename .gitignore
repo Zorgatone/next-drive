@@ -27,3 +27,5 @@ frontend/package.json.md5
 .idea/**/dictionaries
 .idea/**/shelf
 
+/.env
+
