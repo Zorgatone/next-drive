@@ -14,6 +14,12 @@ frontend/package.json.md5
 !.vscode/launch.json
 !.vscode/extensions.json
 
+/frontend/.vscode/*
+!/frontend/.vscode/settings.json
+!/frontend/.vscode/tasks.json
+!/frontend/.vscode/launch.json
+!/frontend/.vscode/extensions.json
+
 ### Visual Studio Code Patch ###
 # Ignore all local history of files
 **/.history

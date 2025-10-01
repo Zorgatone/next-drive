@@ -49,25 +49,25 @@ func (a *App) startup(ctx context.Context) (err error) {
 
 	a.apiClient = apiClient
 
-	username := os.Getenv("NC_USERNAME")
-
-	if username == "" {
-		return errors.New("missing env NC_USERNAME")
-	}
-
-	password := os.Getenv("NC_PASSWORD")
-
-	if password == "" {
-		return errors.New("missing env NC_PASSWORD")
-	}
-
-	err = a.Login(username, password)
-
-	if err != nil {
-		return err
-	}
-
-	a.appLogger.Info("logged in")
+	//username := os.Getenv("NC_USERNAME")
+	//
+	//if username == "" {
+	//	return errors.New("missing env NC_USERNAME")
+	//}
+	//
+	//password := os.Getenv("NC_PASSWORD")
+	//
+	//if password == "" {
+	//	return errors.New("missing env NC_PASSWORD")
+	//}
+	//
+	//err = a.Login(username, password)
+	//
+	//if err != nil {
+	//	return err
+	//}
+	//
+	//a.appLogger.Info("logged in")
 
 	return nil
 }
