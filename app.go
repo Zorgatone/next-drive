@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"net/url"
+	"next-drive/constants"
 	"os"
 
 	"github.com/Zorgatone/next-drive-api/client"
@@ -40,7 +41,7 @@ func (a *App) startup(ctx context.Context) (err error) {
 	apiClient, err := client.NewApiClient(&url.URL{
 		Scheme: "https",
 		Host:   host,
-	})
+	}, constants.UserAgentHeaderValue)
 
 	if err != nil {
 		return err

@@ -5,7 +5,7 @@ go 1.25.1
 require github.com/wailsapp/wails/v2 v2.10.2
 
 require (
-	github.com/Zorgatone/next-drive-api v0.0.0-20251001081240-d72d816c7781
+	github.com/Zorgatone/next-drive-api v0.0.0-20251001143829-d8919076f0b7
 	github.com/joho/godotenv v1.5.1
 )
 
