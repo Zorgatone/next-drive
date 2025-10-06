@@ -1,7 +1,7 @@
 github.com/PuerkitoBio/goquery v1.10.3 h1:pFYcNSqHxBD06Fpj/KsbStFRsgRATgnf3LeXiUkhzPo=
 github.com/PuerkitoBio/goquery v1.10.3/go.mod h1:tMUX0zDMHXYlAQk6p35XxQMqMweEKB7iK7iLNd4RH4Y=
-github.com/Zorgatone/next-drive-api v0.0.0-20251001143829-d8919076f0b7 h1:DflfEgDxJClS5To5v1kGXQZ8J+v2cMvIvbUYXZKws7A=
-github.com/Zorgatone/next-drive-api v0.0.0-20251001143829-d8919076f0b7/go.mod h1:NpEkJlN0aNjLLttiHZtiYEnRlTCgdPbCg6vQeWvwYKw=
+github.com/Zorgatone/next-drive-api v0.0.0-beta.3 h1:Ifs3zAp1Bph0UGVDf/rG3UNHPm54gnuKN2rk1T3/Zp4=
+github.com/Zorgatone/next-drive-api v0.0.0-beta.3/go.mod h1:NpEkJlN0aNjLLttiHZtiYEnRlTCgdPbCg6vQeWvwYKw=
 github.com/andybalholm/cascadia v1.3.3 h1:AG2YHrzJIm4BZ19iwJ/DAua6Btl3IwJX+VI4kktS1LM=
 github.com/andybalholm/cascadia v1.3.3/go.mod h1:xNd9bqTn98Ln4DwST8/nG+H0yuB8Hmgu1YHNnWw0GeA=
 github.com/bep/debounce v1.2.1 h1:v67fRdBA9UQu2NhLFXrSg0Brw7CexQekrBwDMM8bzeY=

@@ -41,7 +41,7 @@ func (a *App) startup(ctx context.Context) (err error) {
 	apiClient, err := client.NewApiClient(&url.URL{
 		Scheme: "https",
 		Host:   host,
-	}, constants.UserAgentHeaderValue)
+	}, constants.GetDefaultHeaders())
 
 	if err != nil {
 		return err
